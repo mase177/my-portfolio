@@ -192,6 +192,32 @@ header h1 {
     text-decoration: underline;
 }
 
+.publication-list {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.publication-list li {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.publication-list li:last-child {
+    border-bottom: none;
+}
+
+.publication-list strong {
+    display: block;
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+}
+
+.publication-list em {
+    color: var(--primary-color);
+    font-style: italic;
+}
+
 .research-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;

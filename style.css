@@ -160,8 +160,36 @@ header h1 {
 }
 
 /* Lists and Cards */
-.skills-list {
+.skills-list, .activity-list {
     padding-left: 1.5rem;
+    list-style-type: none;
+}
+
+.skills-list li, .activity-list li {
+    margin-bottom: 0.75rem;
+    position: relative;
+}
+
+.skills-list li::before, .activity-list li::before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.view-img-link {
+    display: inline-block;
+    margin-left: 0.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.view-img-link:hover {
+    text-decoration: underline;
 }
 
 .research-grid {

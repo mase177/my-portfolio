@@ -4,6 +4,7 @@
     --bg-color: #f8fafc;
     --text-color: #1e293b;
     --card-bg: #ffffff;
+    --nav-bg: #ffffff;
 }
 
 body {
@@ -12,20 +13,71 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
 }
 
+/* Navbar */
+.navbar {
+    background: var(--nav-bg);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+}
+
+/* Main Container */
 .container {
     width: 90%;
-    max-width: 600px;
+    max-width: 800px;
+    margin: 8rem auto 4rem;
     background: var(--card-bg);
     padding: 3rem;
     border-radius: 1rem;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
     text-align: center;
+}
+
+.content-text {
+    text-align: left;
+    margin-top: 2rem;
 }
 
 header h1 {
@@ -67,12 +119,10 @@ header h1 {
 }
 
 .btn-primary:hover {
-    background-color: #1d4ed8;
     transform: translateY(-2px);
 }
 
 .btn-secondary {
-    background-color: transparent;
     border: 2px solid var(--secondary-color);
     color: var(--secondary-color);
 }
@@ -83,22 +133,45 @@ header h1 {
     transform: translateY(-2px);
 }
 
+/* Lists and Cards */
+.skills-list {
+    padding-left: 1.5rem;
+}
+
+.research-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.research-card {
+    background: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.research-card h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
 footer {
     margin-top: 3rem;
     font-size: 0.9rem;
     color: var(--secondary-color);
 }
 
-footer a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
     .actions {
         flex-direction: column;
-    }
-    .container {
-        padding: 2rem;
     }
 }

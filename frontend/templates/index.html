@@ -65,7 +65,7 @@
     <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <video autoplay muted loop playsinline class="w-full h-full object-cover">
-                <source src="/static/hero-bg.mp4" type="video/mp4">
+                <source src="{{ url_for('static', filename='hero-bg.mp4') }}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="absolute inset-0 bg-black/50"></div>
@@ -80,7 +80,7 @@
             </div>
             <div class="flex flex-col md:flex-row justify-center gap-6">
                 <a href="#projects" class="inline-block border border-white px-10 py-4 hover:bg-white hover:text-secondary transition-all duration-300 tracking-widest uppercase text-sm font-bold">Explore Research</a>
-                <a href="/static/cv.pdf" target="_blank" class="inline-block bg-accent px-10 py-4 hover:bg-white hover:text-secondary transition-all duration-300 tracking-widest uppercase text-sm font-bold border border-accent">View CV</a>
+                <a href="{{ url_for('static', filename='cv.pdf') }}" target="_blank" class="inline-block bg-accent px-10 py-4 hover:bg-white hover:text-secondary transition-all duration-300 tracking-widest uppercase text-sm font-bold border border-accent">View CV</a>
             </div>
         </div>
     </section>
@@ -115,7 +115,7 @@
             </div>
             <div class="relative reveal delay-200">
                 <div class="aspect-[3/4] overflow-hidden">
-                    <img src="/static/profile.jpg" alt="Nguyễn Minh Trí" class="w-full h-full object-cover">
+                    <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Nguyễn Minh Trí" class="w-full h-full object-cover">
                 </div>
                 <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-accent/10 -z-10"></div>
             </div>
@@ -136,7 +136,7 @@
                 {% for project in projects %}
                 <div class="group cursor-pointer reveal">
                     <div class="relative overflow-hidden mb-6 aspect-[4/5]">
-                        <img src="{{ project.image }}" alt="{{ project.title }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700">
+                        <img src="{{ url_for('static', filename=project.image.split('/')[-1]) }}" alt="{{ project.title }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700">
                         <div class="absolute inset-0 bg-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <a href="{{ project.link }}" class="bg-white text-secondary px-6 py-3 text-xs uppercase tracking-widest font-bold">Full Case Study</a>
                         </div>

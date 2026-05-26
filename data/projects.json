@@ -4,7 +4,7 @@
     "title": "Rainfall Mapping in Ho Chi Minh City",
     "category": "Publication",
     "description": "Assessment of multiple spatial interpolation techniques for rainfall mapping. Published in IOP Conference Series (Earth and Environmental Science).",
-    "image": "/static/images/Nguyễn Minh Trí-DH23HM.jpg",
+    "image": "/static/images/rainfall_hcmc.jpg",
     "tech": ["GIS", "Spatial Interpolation", "Hydrology"],
     "link": "#"
   },
@@ -40,7 +40,7 @@
     "title": "Earth Observation Certificate",
     "category": "Certificate",
     "description": "Certificate in 'Earth Observation and Geospatial Intelligence in Water Resource and Ecosystem Management' by IMRWG.",
-    "image": "/static/images/Earth Observation and Geospatial Intelligence in Water Resource and Ecosystem Management.jpg",
+    "image": "/static/images/earth_observation.jpg",
     "tech": ["IMRWG", "Remote Sensing", "Water Resource"],
     "link": "#"
   }

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "Rainfall Mapping in Ho Chi Minh City",
+    "category": "Publication",
+    "description": "Assessment of multiple spatial interpolation techniques for rainfall mapping. Published in IOP Conference Series (Earth and Environmental Science).",
+    "image": "/static/images/Nguyễn Minh Trí-DH23HM.jpg",
+    "tech": ["GIS", "Spatial Interpolation", "Hydrology"],
+    "link": "#"
+  },
+  {
+    "id": 2,
+    "title": "DEM Construction for Ba River",
+    "category": "GIS Conference 2025",
+    "description": "Building a high-resolution Digital Elevation Model for the lower Ba River. Presented as a Poster at the National GIS Application Conference 2025.",
+    "image": "/static/images/GIS2025_MT.jpg",
+    "tech": ["DEM", "Remote Sensing", "ArcGIS"],
+    "link": "#"
+  },
+  {
+    "id": 3,
+    "title": "Student Research Proposal 2026",
+    "category": "Research",
+    "description": "Successful defense of the student scientific research proposal for the year 2026.",
+    "image": "/static/images/ThuyetMinhDTSV.jpg",
+    "tech": ["Research", "Academic"],
+    "link": "#"
+  },
+  {
+    "id": 4,
+    "title": "Student Scientific Conference 2025",
+    "category": "Achievement",
+    "description": "Won the Second Prize at the Student Scientific Conference 2025 for outstanding research work.",
+    "image": "/static/images/HTKHSV.jpg",
+    "tech": ["Award", "GIS"],
+    "link": "#"
+  },
+  {
+    "id": 5,
+    "title": "Earth Observation Certificate",
+    "category": "Certificate",
+    "description": "Certificate in 'Earth Observation and Geospatial Intelligence in Water Resource and Ecosystem Management' by IMRWG.",
+    "image": "/static/images/Earth Observation and Geospatial Intelligence in Water Resource and Ecosystem Management.jpg",
+    "tech": ["IMRWG", "Remote Sensing", "Water Resource"],
+    "link": "#"
+  }
+]

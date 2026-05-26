@@ -4,7 +4,7 @@
     "title": "Rainfall Mapping in Ho Chi Minh City",
     "category": "Publication",
     "description": "Assessment of multiple spatial interpolation techniques for rainfall mapping. Published in IOP Conference Series (Earth and Environmental Science).",
-    "image": "/static/rainfall_hcmc.jpg",
+    "image": "/static/GIS2025_MT.jpg",
     "tech": ["GIS", "Spatial Interpolation", "Hydrology"],
     "link": "#"
   },
@@ -13,7 +13,7 @@
     "title": "DEM Construction for Ba River",
     "category": "GIS Conference 2025",
     "description": "Building a high-resolution Digital Elevation Model for the lower Ba River. Presented as a Poster at the National GIS Application Conference 2025.",
-    "image": "/static/GIS2025_MT.jpg",
+    "image": "/static/GIS2025_MTri.jpg",
     "tech": ["DEM", "Remote Sensing", "ArcGIS"],
     "link": "#"
   },

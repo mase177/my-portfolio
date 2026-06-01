@@ -133,16 +133,13 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
                 {% for project in projects %}
-                <div class="group cursor-pointer reveal">
-                    <div class="relative overflow-hidden mb-6 aspect-[4/5]">
+                <div class="group reveal">
+                    <a href="#home" class="block relative overflow-hidden mb-6 aspect-[4/5]">
                         <img src="{{ url_for('static', filename=project.image.split('/')[-1]) }}" alt="{{ project.title }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700">
-                        <div class="absolute inset-0 bg-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                            <a href="{{ project.link }}" class="bg-white text-secondary px-6 py-3 text-xs uppercase tracking-widest font-bold">Full Case Study</a>
-                        </div>
-                    </div>
+                    </a>
                     <span class="text-xs uppercase tracking-widest text-accent mb-2 block">{{ project.category }}</span>
                     <h3 class="font-serif text-2xl mb-3">{{ project.title }}</h3>
-                    <p class="text-secondary/60 text-sm leading-relaxed">{{ project.description }}</p>
+                    <div class="text-secondary/60 text-sm leading-relaxed">{{ project.description | safe }}</div>
                 </div>
                 {% endfor %}
             </div>

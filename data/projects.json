@@ -5,7 +5,11 @@
     "category": "Publication",
     "description": "Assessment of multiple spatial interpolation techniques for rainfall mapping. Published in IOP Conference Series (Earth and Environmental Science). <br><br> <b>Authors:</b> Nguyen Duc Vu, Le Hoang Tu, <b>Nguyen Minh Tri</b>, Vo Ngoc Quynh Tram, and Nguyen Thien Thanh. <br><br> <a href='/static/Vu_2026_IOP_Conf._Ser.__Earth_Environ._Sci._1633_012032.pdf' target='_blank' class='text-accent hover:underline font-bold'>[View Full Paper]</a>",
     "image": "/static/GIS2025_MT.jpg",
-    "tech": ["GIS", "Spatial Interpolation", "Hydrology"],
+    "tech": [
+      "GIS",
+      "Spatial Interpolation",
+      "Hydrology"
+    ],
     "link": "/static/Vu_2026_IOP_Conf._Ser.__Earth_Environ._Sci._1633_012032.pdf"
   },
   {
@@ -14,7 +18,11 @@
     "category": "GIS Conference 2025",
     "description": "Building a high-resolution Digital Elevation Model for the lower Ba River. Presented at the National GIS Application Conference 2025. <br><br> <b>Tác giả:</b> <b>Nguyễn Minh Trí</b>, Lê Hoàng Tú, Nguyễn Quang Bình, Đỗ Xuân Hồng. <br><br> <a href='/static/2025_VNGIS2025_Nguyen_etal_DEM Evaluation.pdf' target='_blank' class='text-accent hover:underline font-bold'>[Xem bài báo]</a>",
     "image": "/static/GIS2025_MTri.jpg",
-    "tech": ["DEM", "Remote Sensing", "ArcGIS"],
+    "tech": [
+      "DEM",
+      "Remote Sensing",
+      "ArcGIS"
+    ],
     "link": "/static/2025_VNGIS2025_Nguyen_etal_DEM Evaluation.pdf"
   },
   {
@@ -23,7 +31,10 @@
     "category": "Research",
     "description": "Successful defense of the student scientific research proposal for the year 2026.",
     "image": "/static/ThuyetMinhDTSV.jpg",
-    "tech": ["Research", "Academic"],
+    "tech": [
+      "Research",
+      "Academic"
+    ],
     "link": "#"
   },
   {
@@ -32,8 +43,11 @@
     "category": "Achievement",
     "description": "Won the Second Prize at the Student Scientific Conference 2025 for outstanding research work.",
     "image": "/static/HTKHSV.jpg",
-    "tech": ["Award", "GIS"],
-    "link": "#"
+    "tech": [
+      "Award",
+      "GIS"
+    ],
+    "link": "/static/Student Scientific Conference 2025.jpg"
   },
   {
     "id": 5,
@@ -41,7 +55,11 @@
     "category": "Certificate",
     "description": "Certificate in 'Earth Observation and Geospatial Intelligence in Water Resource and Ecosystem Management' by IMRWG.",
     "image": "/static/earth_observation.jpg",
-    "tech": ["IMRWG", "Remote Sensing", "Water Resource"],
-    "link": "#"
+    "tech": [
+      "IMRWG",
+      "Remote Sensing",
+      "Water Resource"
+    ],
+    "link": "/static/Earth Observation Certificate.jpg"
   }
 ]

@@ -34,3 +34,16 @@ footer { max-width: 1200px; margin: auto; padding: 31px 28px; border-top: 1px so
 .hero { align-items: start; padding-top: 54px; padding-bottom: 54px; }
 .hero-profile-image { display: block; width: auto; max-width: 100%; height: 210px; margin: -4px auto 22px; object-fit: contain; object-position: center; border-radius: 2px; }
 @media (max-width: 760px) { .hero-profile-image { width: auto; height: auto; max-height: 360px; margin: 0 auto 22px; } }
+
+/* UAV GCP WebGIS portfolio page */
+.webgis-section { padding-top: 20px; padding-bottom: 110px; }
+.webgis-hero-panel { display: grid; grid-template-columns: 1.35fr .65fr; gap: 48px; padding: 48px; border: 1px solid var(--line); background: var(--white); }
+.webgis-hero-panel h2 { max-width: 690px; margin: 0 0 22px; font-size: clamp(2rem, 4vw, 3.3rem); }
+.webgis-hero-panel > div > p:not(.card-label):not(.webgis-status) { max-width: 650px; color: var(--muted); }
+.webgis-summary { padding: 8px 0 8px 28px; border-left: 1px solid var(--line); }
+.webgis-summary span { display: block; margin-top: 20px; color: var(--accent); font-family: "Playfair Display", Georgia, serif; font-size: 1.7rem; line-height: 1; }
+.webgis-summary span:first-child { margin-top: 0; }.webgis-summary strong { display: block; margin-top: 5px; }.webgis-summary p { margin: 4px 0 0; color: var(--muted); font-size: .88rem; line-height: 1.45; }
+.webgis-status { margin: 21px 0 0; color: var(--muted); font-size: .85rem; }
+.webgis-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 22px; }
+.webgis-grid article { min-height: 195px; padding: 27px; border: 1px solid var(--line); background: var(--white); }.webgis-grid i { color: var(--deep); font-size: 1.4rem; }.webgis-grid h3 { margin: 17px 0 8px; font-family: "Playfair Display", Georgia, serif; font-size: 1.35rem; }.webgis-grid p { margin: 0; color: var(--muted); font-size: .9rem; }
+@media (max-width: 760px) { .webgis-hero-panel { grid-template-columns: 1fr; gap: 28px; padding: 30px 25px; }.webgis-summary { padding: 19px 0 0; border-top: 1px solid var(--line); border-left: 0; }.webgis-grid { grid-template-columns: 1fr; }.webgis-grid article { min-height: auto; } }

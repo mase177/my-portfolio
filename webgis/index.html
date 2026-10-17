@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UAV GCP WebGIS research application by Nguyen Minh Tri.">
+    <title>UAV GCP WebGIS | Nguyen Minh Tri</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="nav-container"><a href="../index.html" class="nav-logo">NMT<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="../publications.html">Publications</a></li><li><a href="../activities.html">Activities</a></li><li><a href="../gallery.html">Gallery</a></li><li><a class="active" href="./">WebGIS</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="page-main">
+        <header class="page-header compact"><p class="eyebrow">Research application</p><h1>UAV GCP <em>WebGIS</em></h1><p>Spatial decision support for ground-control-point placement, field accessibility, UAV flight-boundary screening, and survey-route planning.</p></header>
+        <section class="section webgis-section">
+            <div class="webgis-hero-panel">
+                <div>
+                    <p class="card-label">Applying artificial intelligence to automatically optimize GCP placement</p>
+                    <h2>Plan GCPs with coverage, accessibility and terrain considered together.</h2>
+                    <p>The system combines GA and NSGA-II for spatial GCP selection, then uses ACO with OpenStreetMap road data to arrange field-survey visits.</p>
+                    <div class="hero-actions"><a id="webgis-launch" class="button button-primary" href="https://github.com/mase177/uav-gcp-webgis" target="_blank" rel="noopener"><i class="fa-solid fa-map-location-dot"></i> View source</a><a class="button button-ghost" href="https://github.com/mase177/uav-gcp-webgis" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub repository</a></div>
+                    <p id="webgis-status" class="webgis-status" role="status">The public API is being prepared. This page will open the live WebGIS as soon as its Python service URL is configured.</p>
+                </div>
+                <aside class="webgis-summary" aria-label="WebGIS modules"><span>01</span><strong>AOI &amp; flight boundary</strong><p>Draw/import AOI and check administrative and no-fly layers.</p><span>02</span><strong>GCP optimization</strong><p>Generate candidates and balance coverage, uniformity, edge–centre, access and slope.</p><span>03</span><strong>Field survey route</strong><p>Use road access points and ACO to sequence GCP/CP visits.</p></aside>
+            </div>
+            <div class="webgis-grid"><article><i class="fa-solid fa-route"></i><h3>Field-ready route</h3><p>Vehicle mode, access spurs, estimated survey distance and order of stops are reported separately.</p></article><article><i class="fa-solid fa-mountain-sun"></i><h3>Terrain-aware</h3><p>DEM-derived slope is a soft suitability criterion; hillshade remains a visualization layer.</p></article><article><i class="fa-solid fa-file-excel"></i><h3>Project records</h3><p>Save projects and export GeoJSON/KML together with a structured Excel flight-boundary brief.</p></article></div>
+        </section>
+    </main>
+    <footer><span><strong>Nguyen Minh Tri</strong> GIS · Remote Sensing · Spatial Analysis</span><span class="footer-links"><a href="mailto:minhtringuyen121205@gmail.com">Email</a><a href="https://github.com/mase177" target="_blank" rel="noopener">GitHub</a></span></footer>
+    <script src="webgis-config.js"></script>
+    <script>
+        (() => {
+            const liveUrl = typeof window.WEBGIS_URL === "string" ? window.WEBGIS_URL.trim() : "";
+            const launch = document.getElementById("webgis-launch");
+            const status = document.getElementById("webgis-status");
+            if (/^https:\/\//.test(liveUrl)) {
+                launch.href = liveUrl; launch.target = "_blank"; launch.rel = "noopener";
+                launch.innerHTML = '<i class="fa-solid fa-arrow-up-right-from-square"></i> Open live WebGIS';
+                status.textContent = "The public WebGIS service is online.";
+            }
+        })();
+    </script>
+</body>
+</html>

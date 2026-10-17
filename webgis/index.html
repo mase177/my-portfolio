@@ -27,8 +27,8 @@
                     <p class="card-label">Applying artificial intelligence to automatically optimize GCP placement</p>
                     <h2>Plan GCPs with coverage, accessibility and terrain considered together.</h2>
                     <p>The system combines GA and NSGA-II for spatial GCP selection, then uses ACO with OpenStreetMap road data to arrange field-survey visits.</p>
-                    <div class="hero-actions"><a id="webgis-launch" class="button button-primary" href="https://github.com/mase177/uav-gcp-webgis" target="_blank" rel="noopener"><i class="fa-solid fa-map-location-dot"></i> View source</a><a class="button button-ghost" href="https://github.com/mase177/uav-gcp-webgis" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub repository</a></div>
-                    <p id="webgis-status" class="webgis-status" role="status">The public API is being prepared. This page will open the live WebGIS as soon as its Python service URL is configured.</p>
+                    <div class="hero-actions"><a id="webgis-launch" class="button button-primary" href="http://127.0.0.1:8001" target="_blank" rel="noopener"><i class="fa-solid fa-map-location-dot"></i> Explore WebGIS</a><a class="button button-ghost" href="https://github.com/mase177/uav-gcp-webgis" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub repository</a></div>
+                    <p id="webgis-status" class="webgis-status" role="status">Explore opens the WebGIS running locally on this computer. Start the FastAPI server first; the public API will replace this link after deployment.</p>
                 </div>
                 <aside class="webgis-summary" aria-label="WebGIS modules"><span>01</span><strong>AOI &amp; flight boundary</strong><p>Draw/import AOI and check administrative and no-fly layers.</p><span>02</span><strong>GCP optimization</strong><p>Generate candidates and balance coverage, uniformity, edge–centre, access and slope.</p><span>03</span><strong>Field survey route</strong><p>Use road access points and ACO to sequence GCP/CP visits.</p></aside>
             </div>
@@ -40,12 +40,16 @@
     <script>
         (() => {
             const liveUrl = typeof window.WEBGIS_URL === "string" ? window.WEBGIS_URL.trim() : "";
+            const localUrl = typeof window.LOCAL_WEBGIS_URL === "string" ? window.LOCAL_WEBGIS_URL.trim() : "http://127.0.0.1:8001";
             const launch = document.getElementById("webgis-launch");
             const status = document.getElementById("webgis-status");
             if (/^https:\/\//.test(liveUrl)) {
                 launch.href = liveUrl; launch.target = "_blank"; launch.rel = "noopener";
                 launch.innerHTML = '<i class="fa-solid fa-arrow-up-right-from-square"></i> Open live WebGIS';
                 status.textContent = "The public WebGIS service is online.";
+            } else if (/^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?/i.test(localUrl)) {
+                launch.href = localUrl; launch.target = "_blank"; launch.rel = "noopener";
+                launch.innerHTML = '<i class="fa-solid fa-arrow-up-right-from-square"></i> Explore WebGIS';
             }
         })();
     </script>

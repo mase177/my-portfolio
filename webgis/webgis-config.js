@@ -1,8 +1,11 @@
-/*
- * Public FastAPI address. Set this after deploying the API (for example on
- * Render/Railway). Leave blank while the public service is not ready.
- */
-window.WEBGIS_URL = "https://uav-gcp-webgis.onrender.com";
-
-/* Local development address: used by the Explore button on this computer. */
-window.LOCAL_WEBGIS_URL = "http://127.0.0.1:8001";
+/* Public and local endpoints for products presented on the portfolio. */
+window.WEBGIS_PRODUCTS = {
+  uav: {
+    liveUrl: "https://uav-gcp-webgis.onrender.com/",
+    localUrl: "http://127.0.0.1:8001"
+  },
+  rainfall: {
+    liveUrl: "https://webgis-hcm-rainfall.onrender.com/",
+    localUrl: "http://127.0.0.1:8000"
+  }
+};

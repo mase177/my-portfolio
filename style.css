@@ -47,3 +47,26 @@ footer { max-width: 1200px; margin: auto; padding: 31px 28px; border-top: 1px so
 .webgis-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 22px; }
 .webgis-grid article { min-height: 195px; padding: 27px; border: 1px solid var(--line); background: var(--white); }.webgis-grid i { color: var(--deep); font-size: 1.4rem; }.webgis-grid h3 { margin: 17px 0 8px; font-family: "Playfair Display", Georgia, serif; font-size: 1.35rem; }.webgis-grid p { margin: 0; color: var(--muted); font-size: .9rem; }
 @media (max-width: 760px) { .webgis-hero-panel { grid-template-columns: 1fr; gap: 28px; padding: 30px 25px; }.webgis-summary { padding: 19px 0 0; border-top: 1px solid var(--line); border-left: 0; }.webgis-grid { grid-template-columns: 1fr; }.webgis-grid article { min-height: auto; } }
+
+/* WebGIS products portfolio */
+.webgis-page-header { padding-bottom: 36px; }
+.webgis-list-heading { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 56px; align-items: end; padding-bottom: 31px; border-bottom: 1px solid var(--line); }
+.webgis-list-heading h2 { max-width: 650px; margin: 0; font-size: clamp(2rem, 3.8vw, 3.15rem); }
+.webgis-list-heading > p { margin: 0; color: var(--muted); font-size: .96rem; }
+.webgis-products-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 30px; }
+.webgis-product-card { display: flex; flex-direction: column; min-height: 680px; padding: 32px; border: 1px solid var(--line); background: var(--white); }
+.webgis-product-rainfall { background: #f5fbff; border-color: #cbe4ee; }
+.webgis-product-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 35px; }
+.webgis-product-number { color: var(--accent); font-family: "Playfair Display", Georgia, serif; font-size: 2.5rem; line-height: 1; }
+.webgis-product-rainfall .webgis-product-number { color: #3185a3; }
+.webgis-tag { display: inline-flex; align-items: center; gap: 7px; padding: 6px 9px; border: 1px solid var(--line); border-radius: 999px; color: var(--deep); font-size: .7rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.webgis-product-rainfall .webgis-tag { border-color: #a9d5e2; color: #27718c; }
+.webgis-product-card h2 { max-width: 510px; margin: 0; font-size: clamp(1.9rem, 3vw, 2.55rem); }
+.webgis-product-description { min-height: 79px; margin: 18px 0 26px; color: var(--muted); font-size: .96rem; }
+.webgis-feature-list { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.webgis-feature-list li { display: grid; grid-template-columns: 26px 1fr; gap: 11px; align-items: start; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: .88rem; line-height: 1.55; }
+.webgis-feature-list li > i { margin-top: 3px; color: var(--deep); font-size: .95rem; text-align: center; }.webgis-product-rainfall .webgis-feature-list li > i { color: #3185a3; }
+.webgis-feature-list strong { display: block; color: var(--ink); font-size: .88rem; }.webgis-product-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; padding-top: 28px; }.webgis-product-rainfall .button-primary { border-color: #27718c; background: #27718c; }.webgis-product-rainfall .button-primary:hover { background: #1c5d75; }
+.webgis-status { min-height: 22px; margin: 14px 0 0; color: var(--muted); font-size: .78rem; }.button.is-disabled { pointer-events: none; opacity: .6; }.webgis-note { display: flex; gap: 11px; margin-top: 24px; padding: 17px 20px; border-left: 3px solid var(--deep); background: var(--pastel); color: var(--muted); font-size: .87rem; }.webgis-note i { margin-top: 5px; color: var(--deep); }.webgis-note p { margin: 0; }.webgis-note strong { color: var(--ink); }
+@media (max-width: 860px) { .webgis-list-heading { grid-template-columns: 1fr; gap: 14px; }.webgis-products-grid { grid-template-columns: 1fr; }.webgis-product-card { min-height: auto; }.webgis-product-description { min-height: 0; }.webgis-product-actions { margin-top: 28px; } }
+@media (max-width: 760px) { .webgis-product-card { padding: 25px; }.webgis-product-topline { margin-bottom: 27px; }.webgis-product-number { font-size: 2.15rem; }.webgis-note { padding: 15px; } }

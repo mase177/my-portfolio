@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="UAV GCP WebGIS research application by Nguyen Minh Tri.">
-    <title>UAV GCP WebGIS | Nguyen Minh Tri</title>
+    <meta name="description" content="WebGIS products by Nguyen Minh Tri: UAV GCP planning and HCMC rainfall-drought monitoring.">
+    <title>WebGIS Products | Nguyen Minh Tri</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -20,37 +20,78 @@
         </div>
     </nav>
     <main class="page-main">
-        <header class="page-header compact"><p class="eyebrow">Research application</p><h1>UAV GCP <em>WebGIS</em></h1><p>Spatial decision support for ground-control-point placement, field accessibility, UAV flight-boundary screening, and survey-route planning.</p></header>
-        <section class="section webgis-section">
-            <div class="webgis-hero-panel">
-                <div>
-                    <p class="card-label">Applying artificial intelligence to automatically optimize GCP placement</p>
-                    <h2>Plan GCPs with coverage, accessibility and terrain considered together.</h2>
-                    <p>The system combines GA and NSGA-II for spatial GCP selection, then uses ACO with OpenStreetMap road data to arrange field-survey visits.</p>
-                    <div class="hero-actions"><a id="webgis-launch" class="button button-primary" href="http://127.0.0.1:8001" target="_blank" rel="noopener"><i class="fa-solid fa-map-location-dot"></i> Explore WebGIS</a><a class="button button-ghost" href="https://github.com/mase177/uav-gcp-webgis" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub repository</a></div>
-                    <p id="webgis-status" class="webgis-status" role="status">Explore opens the WebGIS running locally on this computer. Start the FastAPI server first; the public API will replace this link after deployment.</p>
-                </div>
-                <aside class="webgis-summary" aria-label="WebGIS modules"><span>01</span><strong>AOI &amp; flight boundary</strong><p>Draw/import AOI and check administrative and no-fly layers.</p><span>02</span><strong>GCP optimization</strong><p>Generate candidates and balance coverage, uniformity, edge–centre, access and slope.</p><span>03</span><strong>Field survey route</strong><p>Use road access points and ACO to sequence GCP/CP visits.</p></aside>
+        <header class="page-header compact webgis-page-header">
+            <p class="eyebrow">Spatial decision-support products</p>
+            <h1>WebGIS <em>products</em></h1>
+            <p>Two research-oriented WebGIS applications that turn spatial data, remote sensing and analytical models into clear, usable decisions.</p>
+        </header>
+
+        <section class="section webgis-section" aria-labelledby="webgis-products-title">
+            <div class="webgis-list-heading">
+                <div><p class="eyebrow">Available applications</p><h2 id="webgis-products-title">Explore the current WebGIS portfolio.</h2></div>
+                <p>Each product opens in a separate public WebGIS service and is maintained as an independent research application.</p>
             </div>
-            <div class="webgis-grid"><article><i class="fa-solid fa-route"></i><h3>Field-ready route</h3><p>Vehicle mode, access spurs, estimated survey distance and order of stops are reported separately.</p></article><article><i class="fa-solid fa-mountain-sun"></i><h3>Terrain-aware</h3><p>DEM-derived slope is a soft suitability criterion; hillshade remains a visualization layer.</p></article><article><i class="fa-solid fa-file-excel"></i><h3>Project records</h3><p>Save projects and export GeoJSON/KML together with a structured Excel flight-boundary brief.</p></article></div>
+
+            <div class="webgis-products-grid">
+                <article class="webgis-product-card webgis-product-uav">
+                    <div class="webgis-product-topline"><span class="webgis-product-number">01</span><span class="webgis-tag"><i class="fa-solid fa-plane-up"></i> UAV survey planning</span></div>
+                    <p class="card-label">UAV GCP WebGIS</p>
+                    <h2>Ground-control-point planning for UAV surveys.</h2>
+                    <p class="webgis-product-description">A spatial decision-support system for GCP placement, field accessibility, flight-boundary screening and survey-route planning.</p>
+                    <ul class="webgis-feature-list">
+                        <li><i class="fa-solid fa-draw-polygon"></i><span><strong>AOI &amp; flight boundary</strong> Draw or import a study area and review operational constraints.</span></li>
+                        <li><i class="fa-solid fa-bullseye"></i><span><strong>GCP optimization</strong> Balance coverage, uniformity, edge–centre distribution, access and terrain.</span></li>
+                        <li><i class="fa-solid fa-route"></i><span><strong>Field route</strong> Sequence GCP/CP visits using road access and ACO routing.</span></li>
+                    </ul>
+                    <div class="webgis-product-actions"><a id="uav-webgis-launch" class="button button-primary" href="https://uav-gcp-webgis.onrender.com/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open UAV GCP WebGIS</a><a class="button button-ghost" href="https://github.com/mase177/uav-gcp-webgis" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source code</a></div>
+                    <p id="uav-webgis-status" class="webgis-status" role="status">Public service link is loading.</p>
+                </article>
+
+                <article class="webgis-product-card webgis-product-rainfall">
+                    <div class="webgis-product-topline"><span class="webgis-product-number">02</span><span class="webgis-tag"><i class="fa-solid fa-cloud-rain"></i> Climate &amp; drought</span></div>
+                    <p class="card-label">HCMC Rainfall &amp; Drought WebGIS</p>
+                    <h2>CHIRPS rainfall correction and meteorological drought monitoring.</h2>
+                    <p class="webgis-product-description">A WebGIS for Ho Chi Minh City that compares station rainfall with CHIRPS, presents XGBoost-corrected rainfall and visualizes meteorological drought during 1993–2022.</p>
+                    <ul class="webgis-feature-list">
+                        <li><i class="fa-solid fa-droplet"></i><span><strong>Daily &amp; monthly rainfall</strong> Browse native-resolution CHIRPS rainfall before and after correction.</span></li>
+                        <li><i class="fa-solid fa-chart-line"></i><span><strong>Station evaluation</strong> Compare observed rain, raw CHIRPS and corrected rainfall at 13 gauges.</span></li>
+                        <li><i class="fa-solid fa-temperature-arrow-down"></i><span><strong>SPI drought maps</strong> View SPI-3, SPI-6 and SPI-12 drought-frequency rasters through time.</span></li>
+                    </ul>
+                    <div class="webgis-product-actions"><a id="rainfall-webgis-launch" class="button button-primary" href="https://webgis-hcm-rainfall.onrender.com/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open rainfall WebGIS</a></div>
+                    <p id="rainfall-webgis-status" class="webgis-status" role="status">Public service link is loading.</p>
+                </article>
+            </div>
+
+            <aside class="webgis-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><p><strong>Research use.</strong> These applications are prepared for research communication, spatial exploration and project demonstration. Data availability and processing scope are described inside each WebGIS.</p></aside>
         </section>
     </main>
     <footer><span><strong>Nguyen Minh Tri</strong> GIS · Remote Sensing · Spatial Analysis</span><span class="footer-links"><a href="mailto:minhtringuyen121205@gmail.com">Email</a><a href="https://github.com/mase177" target="_blank" rel="noopener">GitHub</a></span></footer>
     <script src="webgis-config.js"></script>
     <script>
         (() => {
-            const liveUrl = typeof window.WEBGIS_URL === "string" ? window.WEBGIS_URL.trim() : "";
-            const localUrl = typeof window.LOCAL_WEBGIS_URL === "string" ? window.LOCAL_WEBGIS_URL.trim() : "http://127.0.0.1:8001";
-            const launch = document.getElementById("webgis-launch");
-            const status = document.getElementById("webgis-status");
-            if (/^https:\/\//.test(liveUrl)) {
-                launch.href = liveUrl; launch.target = "_blank"; launch.rel = "noopener";
-                launch.innerHTML = '<i class="fa-solid fa-arrow-up-right-from-square"></i> Open live WebGIS';
-                status.textContent = "The public WebGIS service is online.";
-            } else if (/^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?/i.test(localUrl)) {
-                launch.href = localUrl; launch.target = "_blank"; launch.rel = "noopener";
-                launch.innerHTML = '<i class="fa-solid fa-arrow-up-right-from-square"></i> Explore WebGIS';
-            }
+            const products = window.WEBGIS_PRODUCTS || {};
+            const connectProduct = (key) => {
+                const item = products[key] || {};
+                const launch = document.getElementById(`${key}-webgis-launch`);
+                const status = document.getElementById(`${key}-webgis-status`);
+                const liveUrl = typeof item.liveUrl === "string" ? item.liveUrl.trim() : "";
+                const localUrl = typeof item.localUrl === "string" ? item.localUrl.trim() : "";
+                if (/^https:\/\//.test(liveUrl)) {
+                    launch.href = liveUrl;
+                    status.textContent = "Public WebGIS URL configured — opens in a new tab.";
+                    return;
+                }
+                if (/^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?/i.test(localUrl)) {
+                    launch.href = localUrl;
+                    status.textContent = "Local development service — start its API before opening.";
+                    return;
+                }
+                launch.setAttribute("aria-disabled", "true");
+                launch.classList.add("is-disabled");
+                status.textContent = "The public service link is being prepared.";
+            };
+            connectProduct("uav");
+            connectProduct("rainfall");
         })();
     </script>
 </body>
